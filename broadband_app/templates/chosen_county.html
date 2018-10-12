@@ -1,0 +1,43 @@
+
+<h4> {{ county.name }} County </h4>
+{% if county.median_speed > 10 %}
+	<div>
+	<div class="loading-5"> </div>
+	<p> {{ county.median_speed }} Mbps </p>
+	</div>
+	
+{% elif county.median_speed > 8 %}
+
+	<div>
+	<div class="loading-4"> </div>
+	<p> {{ county.median_speed }} Mbps</p>
+	</div>
+
+{% elif county.median_speed > 6 %}
+
+	<div>
+	<div class="loading-3"> </div>
+	<p> {{ county.median_speed }} Mbps</p>
+	</div>
+
+{% elif county.median_speed > 4 %}
+
+	<div>
+	<div class="loading-2"> </div>
+	<p> {{ county.median_speed }} Mbps</p>
+	</div>
+
+{% elif county.median_speed > 2 %}
+
+	<div>
+	<div class="loading-1"> </div>
+	<p> {{ county.median_speed }} Mbps</p>
+	</div>
+
+{% else %}
+
+	<div>
+	<div class="loading-0"> </div>
+	<p> {{ county.median_speed }}</p>
+	</div>
+{% endif %}
