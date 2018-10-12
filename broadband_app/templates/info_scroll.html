@@ -114,11 +114,7 @@
 
 			  $.getJSON("../static/US_counties.json",function(data){
 			    // add GeoJSON layer to the map once the file is loaded
-			    L.geoJson(data, {
-			    	weight: .3, 
-			    	color: 'white',
-			    	fillOpacity: 0.7
-			    }).addTo(map);
+			    L.geoJson(data, { }).addTo(map);
 			  function style(feature) {
 			    return {
 			       fillColor: getColor(feature.properties.MEDIAN_SPEED),

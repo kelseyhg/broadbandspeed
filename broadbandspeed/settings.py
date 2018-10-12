@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = 'qqja=$u47kb2&f0+nj-up=bsa4d$o7%7&gm1jk!5&2^(oxocs('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['broadband-speed.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -76,14 +77,19 @@ WSGI_APPLICATION = 'broadbandspeed.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'broadband',
-        'HOST': 'localhost',
-    }
-}
+#LocalHost
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'broadband',
+#         'HOST': 'localhost',
+#     }
+# }
 
+#Production
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config(
+    default='postgres://domdydlgrnloie:6e4345432957b888c32f8c083dfa8b5f97a903891c82e2b5d9218b21aafd7e70@ec2-184-73-197-211.compute-1.amazonaws.com:5432/d2lki1753uablb')
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -121,4 +127,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+#STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'broadband_app/static'),
+    os.path.join(BASE_DIR, 'broadband_app'),
+)
