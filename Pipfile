@@ -11,7 +11,7 @@ django-cors-headers = "*"
 dj-database-url = "*"
 leaflet = "*"
 django-geojson = "*"
-"psycopg2-binary" = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.7"

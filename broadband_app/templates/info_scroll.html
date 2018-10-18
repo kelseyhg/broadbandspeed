@@ -48,6 +48,7 @@
 		<div id="us-map">
 			<h1> Variable Broadband Access in the Continental US</h1>
 			<img id="counties-map" src="{% static 'img/map-placeholder.png' %}" width="800">
+			<h4> Counties with darker colors have better access to broadband-speed internet; lighter counties have little access. </h4><br>
 		</div>
 		<div id="map"></div>
 
@@ -117,7 +118,7 @@
 			    L.geoJson(data, { }).addTo(map);
 			  function style(feature) {
 			    return {
-			       fillColor: getColor(feature.properties.MEDIAN_SPEED),
+			       fillColor: getColor(feature.properties.SPEED),
 			       weight: .5, 
 			    	color: 'white',
 			    	fillOpacity: 0.7
@@ -127,7 +128,9 @@
 			L.geoJson(data, {style: style}).addTo(map);
 			    });
 
+
   function getColor(d) {
+  	console.log(d)
     return d = 0 ? '#800026' :
            d > 10  ? '#BD0026' :
            d > 8  ? '#E31A1C' :
