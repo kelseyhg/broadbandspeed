@@ -10,7 +10,7 @@ django = "*"
 django-heroku = "*"
 django-cors-headers = "*"
 dj-database-url = "*"
-leaflet = "*"
+django-leaflet = "*"
 django-geojson = "*"
 psycopg2-binary = "*"
 

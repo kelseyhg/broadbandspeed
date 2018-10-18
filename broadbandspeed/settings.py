@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'broadband_app',
     'leaflet',
     'djgeojson',
+    'broadband_app',
 ]
 
 MIDDLEWARE = [
