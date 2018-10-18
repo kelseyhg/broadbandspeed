@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-gdal = "==1.11.2"
 whitenoise = "*"
 gunicorn = "*"
 django = "*"
