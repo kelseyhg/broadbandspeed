@@ -136,4 +136,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'broadband_app/static'),
 )
 
-GDAL_LIBRARY_PATH = '/usr/local/bin'
+GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
+GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
