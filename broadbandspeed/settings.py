@@ -135,3 +135,5 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'broadband_app/static'),
 )
+
+GDAL_LIBRARY_PATH = '/usr/local/bin'
