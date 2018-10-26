@@ -3,12 +3,12 @@ from .models import County, State
 
 #states = [("01", "Delaware"), ("02", "New Jersey"), ("03", "Hawaii")]
 states = State.objects.all()
-statesTuples = [("null", "------------")]
+statesTuples = [("null", "select state")]
 for state in states:
 	statesTuples.append((state.state_id, state.name))
 
 counties = County.objects.all()
-countiesTuples = []
+countiesTuples = [("null", "------------")]
 for county in counties:
 	countiesTuples.append((county.id, county.name))
 
