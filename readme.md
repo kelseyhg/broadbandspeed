@@ -15,11 +15,11 @@ CSS animations illustrate the problems with slow internet connections.
 	
 ## Stills
 
-![stats](kelseyhg.github.com/broadbandspeed/cap-1.png "Learn about broadband access")
+![stats](/cap-1.png "Learn about broadband access")
 
-![map](kelseyhg.github.com/broadbandspeed/cap-2.png "Visualize broadband speed across the country")
+![map](/cap-2.png "Visualize broadband speed across the country")
 
-![comparison](kelseyhg.github.com/broadbandspeed/cap-3.png "Compare two counties' speeds")
+![comparison](/cap-3.png "Compare two counties' speeds")
 
 
 ## Issues
